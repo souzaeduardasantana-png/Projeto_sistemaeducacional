@@ -8,6 +8,7 @@ Maria Eduarda Santana de Souza
 Kaike Pinheiro Simplício
 
 -PROPOSTA DO PROJETO
+
 Desenvolver um sistema web para correção de provas, com o objetivo de automatizar o processo de avaliação, estudo para avaliações e atividades,creduzir erros e otimizar o tempo dos professores e dos alunos também. 
 
 O SISTEMA PERMITIRÁ:
