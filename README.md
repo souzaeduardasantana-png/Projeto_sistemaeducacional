@@ -2,6 +2,7 @@ PROJETO DE DESENVOLVIMENTO DE CORREÇÀO DE PROVAS E ATIVIDADES
 EM WEBSITES
 
 -INTEGRANTES
+
 Catarina Eri Nakatani
 Giuliana Victoria Pedrassi
 Maria Eduarda Santana de Souza
@@ -11,6 +12,7 @@ Kaike Pinheiro Simplício
 
 Desenvolver um sistema web para correção de provas, com o objetivo de automatizar o processo de avaliação, estudo para avaliações e atividades,creduzir erros e otimizar o tempo dos professores e dos alunos também. 
 
+
 O SISTEMA PERMITIRÁ:
 - Cadastro de provas
 - Cadastro de questões
@@ -18,6 +20,7 @@ O SISTEMA PERMITIRÁ:
 - Sistema de pontuação
 - Armazenamento de provas corrigidas
 - Consulta de provas anteriores dos alunos
+
 
 
 ATIVIDADES DO PROJETO
@@ -39,11 +42,13 @@ ATIVIDADES DO PROJETO
 - Cálculo de notas
 - Histórico de provas dos alunos
 
+
 TECNOLOGIAS UTILIZADAS
 EX:
  HTML, CSS, JavaScript)
  Java / PHP)
  Banco de Dados - MySQL)
+
 
 STATUS DO PROJETO
 - Em desenvolvimento
