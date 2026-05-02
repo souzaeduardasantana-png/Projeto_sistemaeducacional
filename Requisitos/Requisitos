@@ -1,1 +1,378 @@
+ESPECIFICAÇÃO DE REQUISITOS
+
+1) Definição do requisito funcional de usuário: LOGIN ALUNO
+- Descreve o fluxo de login do aluno no app
+1) Especificação do requisito de sistema:
+Fluxo de Eventos Normal:
+1. O aluno acessa o navegador
+2. O aluno faz login no site do SIGAA com e-mail e senha
+3. O aluno clica no botão do Menu para acessar o ambiente externo da IA
+4. O aluno faz login com o mesmo e-mail e senha que usou para logar no SIGAA
+5. O aluno finalizou o fluxo de login
+Fluxo de Eventos de Exceção:
+3.1 - Conexão de internet: Caso não esteja funcionando conforme o app precisa para rodar
+online a página não carrega e exibe uma mensagem de “conexão insuficiente”.
+4.1 - Senha incorreta:
+4.1.1 - Primeira e segunda tentativa: Mensagem de erro informando que após a
+terceira tentativa incorreta o acesso é bloqueado e para desbloquear é preciso entrar em
+contato com o administrador da IA
+4.1.2 - Terceira tentativa: Exibe a mensagem de que a conta foi bloqueada
+orientando entrar em contato com o administrador da IA (informa os canais de
+comunicação disponíveis)
+4.1.3 - Se o e-mail e senha estiverem corretos, porém a autenticação no app der
+errado, o aluno também não consegue logar no SIGAA ou IA
+
+
+
+2) Definição do requisito funcional de usuário: LOGIN PROFESSOR
+- Descreve o fluxo de login do professor no app
+2) Especificação do requisito de sistema:
+Fluxo de Eventos Normal:
+1. O professor acessa o navegador
+2. O professor faz login no site do SIGAA com e-mail e senha
+3. O professor clica no botão do Menu para acessar o ambiente externo da IA
+4. O professor faz login com o mesmo e-mail e senha que usou para logar no
+SIGAA
+5. O professor finalizou o fluxo de login
+Fluxo de Eventos de Exceção:
+3.1 - Conexão de internet: Caso não esteja funcionando conforme o app precisa para rodar
+online a página não carrega e exibe uma mensagem de “conexão insuficiente”.
+4.1 - Senha incorreta:
+4.1.1 - Primeira e segunda tentativa: Mensagem de erro informando que após a
+terceira tentativa incorreta o acesso é bloqueado e para desbloquear é preciso entrar em
+contato com o administrador da IA
+4.1.1.1 - Primeira e segunda tentativa com Licença Expirada: Exibe a
+mensagem acima e a mensagem do evento 4.2
+4.1.2 - Terceira tentativa: Exibe a mensagem de que a conta foi bloqueada
+orientando entrar em contato com o administrador da IA (informa os canais de
+comunicação disponíveis)
+4.1.2.1 - Terceira tentativa com Licença Expirada: Exibe a mensagem
+acima e a mensagem do evento 4.2
+4.1.3 - Se o e-mail e senha estiverem corretos, porém a autenticação for negada, o
+professor também não consegue logar no SIGAA ou IA
+4.2 - Licença:
+4.2.1 - Licença expirada com login válido: A página recarrega para o login com
+campo de e-mail e senha exibindo a mensagem de “licença expirada” orientando entrar
+em contato para regularizar (exibindo os dados de contato)
+
+
+
+3) Definição do requisito funcional de usuário: UPLOAD DE ATIVIDADE/PROVA
+- Descreve o fluxo de upload de uma nova atividade ou prova pelo professor(a)
+3) Especificação do requisito de sistema:
+Fluxo de Eventos Normal:
+1. O professor faz login
+2. O professor clica no Menu Principal
+3. O professor clica no seu perfil
+4. O professor seleciona a unidade da FATEC
+5. O professor seleciona a matéria
+6. O professor clica no botão de “Adicionar atividade”
+Fluxo de Eventos de Exceção:
+3.1 - Depois do login, tanto para alunos quanto para professores, é selecionado primeiro o
+“perfil do professor” pois cada professor pode lecionar matérias diferentes, para
+diferentes semestres, em diferentes FATECs, para diferentes alunos que, nem sempre,
+fazem parte da mesma chamada.
+3.1.1 - É preciso clicar no seu perfil pois os nomes dos professores são exibidos
+para abrir as próximas opções
+4.1 - Unidades:
+4.1.1 - Uma unidade: Apenas clicar em cima do nome da FATEC
+4.1.2 - Mais unidades: Clicar e segurar na primeira FATEC, selecionar as outras.
+4.1.2.1 - O seletor permite escolher até 3 unidades diferentes da FATEC
+por vez. Para selecionar mais unidades é preciso finalizar o upload e retornar para o
+evento 4
+5.1 - Matérias: Habilitam de acordo com as FATECs selecionadas. No cadastro inicial são
+definidas às unidades em que o professor trabalha, quais matérias leciona e para quais
+semestres.
+5.1.1 - Quem efetua o cadastro é a diretoria da FATEC em que o professor
+trabalha e é também quem faz ajustes e atualizações referentes às matérias. O professor
+não tem esse tipo de controle/acesso
+5.2 - Alunos: Os alunos também são selecionados seguindo a lógica das matérias
+4) Definição do requisito funcional de usuário: CONSULTAR DÚVIDAS COM IA
+- Descreve o fluxo de ação do aluno, para esclarecimento de dúvidas em matemática,
+com base nos conteúdos enviados pelo professor.
+
+
+
+4) Especificação do requisito de sistema:
+Fluxo de Eventos Normal:
+1. O aluno acessa a seção de IA / “Tirar dúvidas”
+2. O aluno seleciona o professor, matéria e atividade relacionada
+3. O aluno digita sua dúvida em matemática
+4. O sistema processa a pergunta com base nos conteúdos enviados pelo professor
+5. O sistema retorna uma explicação
+6. O aluno visualiza a resposta e pode continuar a interação
+Fluxo de Eventos de Exceção:
+4.1 - Conteúdo não encontrado: Caso não exista material previamente enviado pelo
+professor para aquela matéria/atividade, o sistema exibe uma mensagem informando que
+o conteúdo não foi encontrado.
+4.1.1 - Ação do usuário: O aluno clica no botão “Voltar”.
+4.1.2 - Resultado: O sistema redireciona o aluno para a página anterior.
+4.2 - Dúvida fora do assunto: Caso a pergunta não esteja relacionada ao conteúdo da
+atividade/matéria, o sistema informa que não pode responder com precisão.
+4.2.1 - Ação do usuário: O aluno pode reformular a pergunta.
+4.3 - Erro de processamento da IA: Caso ocorra falha no processamento, o sistema exibe
+mensagem de erro.
+4.3.1 - Ação do usuário: O aluno clica em “Tentar novamente”.
+4.3.2 - Resultado: O sistema reprocessa a solicitação.
+4.4 - Conexão de internet: Caso a conexão esteja insuficiente, a resposta não é carregada.
+4.4.1 - Resultado: O sistema exibe mensagem de “conexão insuficiente”.
+
+
+
+5) Definição do requisito funcional de usuário: CORREÇÃO AUTOMÁTICA –
+QUESTÕES DE MÚLTIPLA ESCOLHA
+- Descreve o fluxo de correção automática de questões objetivas com base no
+gabarito enviado pelo professor
+5) Especificação do requisito de sistema:
+Fluxo de Eventos Normal:
+1. O aluno seleciona a matéria, professor e a prova/atividade
+2. O aluno envia as respostas
+3. O sistema recebe as respostas do aluno
+4. O sistema compara cada resposta com o gabarito
+5. O sistema identifica acertos e erros
+6. O sistema calcula a pontuação automaticamente
+7. O sistema registra a nota do aluno
+8. O sistema retorna o resultado para o aluno
+Fluxo de Eventos de Exceção:
+5.1 - Gabarito não cadastrado: Caso o professor não tenha definido o gabarito.
+5.1.1 - Resultado: O sistema exibe mensagem de indisponibilidade de correção
+automática.
+5.2 - Resposta não selecionada: Caso o aluno deixe questões em branco.
+5.2.1 - Resultado: O sistema considera a questão como incorreta.
+5.3 - Erro no processamento: Caso ocorra um erro na comparação das respostas.
+5.3.1 - Ação do sistema: O sistema tenta reprocessar automaticamente.
+5.3.2 - Resultado: Se o erro persistir, exibe mensagem ao usuário.
+5.4 - Dados inconsistentes:Caso o número de questões e respostas enviadas seja diferente
+5.4.1 - Resultado: O sistema informa erro e registra para análise.
+5.5 - Conexão de internet: Caso haja falha de conexão.
+5.5.1 - Durante o envio das respostas: O envio não é concluído.
+5.5.1.1 - Resultado: O sistema exibe mensagem de falha na conexão.
+5.5.1.2 - Ação do usuário: O aluno pode tentar reenviar.
+5.5.2 - Durante o processamento: A correção não é finalizada.
+5.5.2.1 - Resultado: O sistema exibe mensagem de “processamento não
+concluído”.
+
+
+
+6) Definição do requisito funcional de usuário: CORREÇÃO AUTOMÁTICA –
+QUESTÕES DISSERTATIVAS
+-Descreve o fluxo de correção automática de respostas dissertativas com base em
+palavras-chave e critérios definidos pelo professor
+6) Especificação do requisito de sistema:
+Fluxo de Eventos Normal:
+1. O aluno escreve suas respostas
+2. O aluno envia as respostas
+3. O sistema recebe as respostas do aluno
+4. O sistema analisa o conteúdo das respostas
+5. O sistema compara as palavras-chave da resposta do aluno com as palavras-chave
+6. O sistema avalia o nível de acerto
+7. O sistema classifica cada resposta como: Correta, parcialmente correta ou
+incorreta
+Fluxo de Eventos de Exceção:
+6.1 - Palavras-chave não cadastradas: Caso o professor não tenha definido palavras-chave.
+6.1.1 - Resultado: O sistema exibe mensagem de indisponibilidade de correção
+automática.
+6.2 - Resposta em branco: Caso o aluno não responda a questão.
+6.2.1 - Resultado: O sistema classifica como incorreta.
+6.3 - Resposta ambígua ou insuficiente: Caso a resposta contenha poucas ou nenhuma
+palavra-chave semelhante.
+6.3.1 - Resultado: O sistema classifica como “parcialmente correta” ou
+“incorreta”.
+6.4 - Erro no processamento da IA: Caso ocorra falha na análise.
+6.4.1 - Ação do sistema: O sistema tenta reprocessar automaticamente.
+6.4.2 - Resultado: Se o erro continuar, exibe mensagem ao usuário.
+6.5 - Dados inconsistentes: Caso a resposta e estrutura da questão sejam incompatíveis.
+6.5.1 - Resultado: O sistema informa erro.
+6.6 - Conexão de internet: Caso haja falha de conexão.
+6.6.1 - Durante o envio das respostas: O envio não é concluído.
+6.6.1.1 - Resultado: O sistema exibe mensagem de erro de conexão.
+6.6.1.2 - Ação do usuário: O aluno pode tentar reenviar.
+6.6.2 - Durante o processamento da correção: A análise não é finalizada.
+6.6.2.1 - Resultado: O sistema exibe mensagem de “processamento não concluído”.
+
+
+
+7) Definição do requisito funcional de usuário: PRESENÇAS E FALTAS
+- Lançar presença dos alunos
+7) Especificação do requisito de sistema:
+Fluxo de Eventos Normal:
+1. O professor acessa o navegador e entra no portal do SIGAA.
+2. O professor realiza o login com seu e-mail institucional e senha.
+3. O professor seleciona a disciplina correspondente no painel principal.
+4. O professor abre a aba "Aula" (ou "Frequência") no menu de turmas virtuais.
+5. O professor seleciona o dia da aula no calendário ou lista de encontros.
+6. O professor seleciona os alunos que estão presentes (marcando os respectivos
+campos).
+7. O professor clica no botão "Enviar" (ou "Salvar") para atualizar o sistema.
+8. O sistema confirma o registro e o professor finaliza o fluxo.
+Fluxo de Eventos de Exceção:
+-3.1 - Turma não encontrada: Caso a disciplina não apareça no painel, o professor deve
+verificar se o período letivo selecionado está correto ou entrar em contato com a
+coordenação.
+5.1 - Data retroativa bloqueada: Se o professor tentar lançar presença em uma data fora
+do prazo estipulado pela instituição, o sistema exibe uma mensagem de "Prazo de
+lançamento expirado" e bloqueia a edição.
+6.1 - Lista de alunos vazia: Caso não apareçam alunos na lista, o sistema informa que não
+há estudantes matriculados nesta turma.
+7.1 - Erro de sincronização:
+7.1.1 - Queda de conexão: Se a internet oscilar no momento do envio, o sistema exibe
+"Erro ao salvar: verifique sua conexão" e os dados não são computados.
+7.1.2 - Conflito de horário: Caso o professor tente lançar presença em um horário que
+conflite com outra atividade registrada, o sistema solicita a revisão dos dados.
+
+
+
+8) Definição do requisito funcional de usuário: INSCRIÇÕES WORKSHOPS
+- Inscrição em oficina de workshop
+8) Especificação do requisito de sistema:
+Fluxo de Eventos Normal:
+1. O aluno acessa o navegador e entra na plataforma oficial do Workshop.
+2. O aluno realiza o login com suas credenciais cadastradas.
+3. O aluno navega até a seção de cronograma e seleciona o dia de interesse.
+4. O aluno visualiza a lista de atividades e seleciona a oficina desejada.
+5. O aluno clica no botão "Inscrever-se".
+6. O sistema valida a disponibilidade de vaga e confirma a inscrição.
+7. O aluno recebe o comprovante de inscrição na tela e finaliza o fluxo.
+Fluxo de Eventos de Exceção:
+-4.1 - Lotação da oficina: Caso o número máximo de participantes tenha sido atingido, o
+sistema exibe a mensagem: "Oficina lotada: Não há vagas disponíveis para esta atividade"
+e desabilita o botão de inscrição.
+5.1 - Conflito de horário: * 5.1.1: Se o aluno já estiver inscrito em outra oficina no mesmo
+horário, o sistema exibe um alerta informando que não é possível se inscrever em
+atividades simultâneas.
+5.2 - Pré-requisito não atendido: Caso a oficina exija um conhecimento prévio ou material
+específico que o aluno não sinalizou possuir, o sistema exibe um aviso de impedimento.
+6.1 - Erro no processamento da vaga: Se a internet cair no momento exato do clique e a
+vaga for preenchida por outro usuário segundos antes, o sistema exibe: "Erro ao
+processar: a última vaga acaba de ser preenchida".
+
+
+
+9) Definição do requisito funcional de usuário: CERTIFICADO WORKSHOP
+- Requisitar certificado do workshop
+9) Especificação do requisito de sistema:
+Fluxo de Eventos Normal:
+1. O aluno acessa a plataforma do Workshop e realiza o login.
+2. O aluno navega até a aba "Oficinas Participadas".
+3. O aluno visualiza a lista e seleciona a oficina da qual deseja o certificado.
+4. O aluno clica no botão "Requisitar Certificado".
+5. O sistema realiza a validação automática da presença do aluno naquela atividade.
+6. O sistema confirma que a presença foi registrada pelo professor/organizador.
+7. O certificado é gerado e o botão "Download" é liberado para o aluno.
+8. O aluno baixa o arquivo e finaliza o fluxo.
+Fluxo de Eventos de Exceção:
+-5.1 - Presença não confirmada:
+5.1.1 - Ausência de registro: Caso o aluno não tenha obtido a presença mínima necessária,
+o sistema exibe a mensagem: "Certificado indisponível: Presença não constatada nesta
+oficina".
+5.1.2 - Aguardando atualização: Caso a oficina tenha ocorrido recentemente e o professor
+ainda não tenha enviado a lista (como no fluxo anterior), o sistema exibe: "Em
+processamento: A lista de presença ainda não foi enviada pelo moderador".
+6.1 - Erro na geração do documento: Caso ocorra uma falha técnica ao gerar o PDF, o
+sistema exibe: "Erro ao gerar arquivo: Tente novamente em alguns minutos ou contate o
+suporte".
+7.1 - Pendência de dados cadastrais: Se o perfil do aluno estiver com o nome ou CPF
+incompleto, o sistema impede a emissão e solicita que o aluno atualize seus dados antes de
+liberar o download.
+
+
+
+10) Definição do requisito funcional de usuário: UPLOAD DE RESPOSTAS
+- Descreve o fluxo de upload de respostas e atividades pelo professor(a)
+10) Especificação do requisito de sistema:
+Fluxo de Eventos Normal:
+1. O professor faz login
+2. O professor clica no Menu Principal
+3. O professor clica no seu perfil
+4. O professor seleciona a unidade da FATEC
+5. O professor seleciona a matéria
+6. Clica na opção de provas ou atividades
+7. Escolhe a prova ou atividade que deseja enviar as respostas
+8. Digita ou anexa o gabarito ou respostas no sistema
+9. Confere se estão corretas e se os campos estão preenchidos
+10. Clica em “Enviar” ou “Salvar”
+11. Sistema verifica se todos os campos estão preenchidos corretamente
+12. Se faltar algo, o sistema pede correção, se estiver tudo preenchido sistema manda
+as respostas
+13. Sistema exibe mensagem de confirmação “Respostas enviadas com sucesso!”
+Fluxo de Eventos de Exceção:
+1.1- Erro de conexão
+1.1.1 – Sistema pede para tentar novamente
+5.1 - Professor pode não ter subido a prova ou atividade ainda
+7.1 - Então ele precisará subir a atividade primeiro para depois colocar as respostas
+8.1 - Formato inválido de arquivo, o sistema solicita outro formato de arquivo para subir
+as respostas
+10.1 – Se as respostas demorarem para serem adicionadas na página aberta, o tempo de
+login expira e as respostas não são adicionadas. A atividade pode ser bloqueada e o
+professor terá que realizar novamente os passos anteriores.
+
+
+
+11) Definição do requisito funcional de usuário: VISUALIZAR DESEMPENHO DO
+ALUNO
+- Descreve o fluxo de visualização do desempenho acadêmico do aluno na
+plataforma.
+11) Especificação do requisito de sistema:
+Fluxo de Eventos Normal:
+1. O aluno acessa o navegador e realiza o login na plataforma
+2. O aluno clica no Menu Principal
+3. O aluno acessa a opção “Desempenho” ou “Minhas Notas”
+4. O aluno seleciona a unidade, matéria e período desejado
+5. O sistema recupera os dados de desempenho (notas, atividades, presença e
+feedbacks)
+6. O sistema exibe um painel com o resumo do desempenho do aluno
+7. O aluno visualiza as informações e pode navegar entre diferentes matérias ou
+períodos
+Fluxo de Eventos de Exceção:
+3.1 - Dados não encontrados: Caso não existam registros de desempenho para os filtros
+selecionados
+3.1.1 - Resultado: O sistema exibe a mensagem “Nenhum dado de desempenho
+encontrado para os critérios selecionados”
+3.1.2 - Ação do usuário: O aluno pode alterar os filtros e tentar novamente
+4.1 - Erro no carregamento dos dados: Caso ocorra falha ao buscar informações no
+sistema
+4.1.1 - Resultado: O sistema exibe mensagem “Erro ao carregar dados”
+4.1.2 - Ação do usuário: O aluno pode clicar em “Tentar novamente”
+5.1 - Dados incompletos: Caso algumas notas ou presenças ainda não tenham sido
+lançadas pelo professor
+5.1.1 - Resultado: O sistema exibe os dados disponíveis e sinaliza como “Em
+andamento” os itens pendentes
+6.1 - Conexão de internet: Caso a conexão esteja insuficiente
+6.1.1 - Resultado: O sistema exibe mensagem de “conexão insuficiente” e não
+carrega o painel
+12) Definição do requisito funcional de usuário: DASHBOARD DE DESEMPENHO DA
+TURMA
+- Descreve o fluxo em que o professor visualiza as estatísticas de aprendizado e os
+principais erros detectados pela IA nas atividades da turma.
+
+
+
+12) Especificação do requisito de sistema:
+Fluxo de Eventos Normal:
+1. O professor faz login no sistema.
+2. O professor acessa o Menu Principal e seleciona seu perfil.
+3. O professor seleciona a unidade da FATEC e a matéria desejada.
+4. O professor clica no botão "Dashboard de Desempenho".
+5. O sistema gera um gráfico com a média de notas (múltipla escolha e dissertativa).
+6. O sistema exibe uma lista das "Dúvidas Mais Frequentes" processadas pela IA no
+Requisito 4.
+7. O sistema destaca os temas em que os alunos tiveram mais dificuldade nas
+correções automáticas.
+8. O professor visualiza o relatório e finaliza o fluxo.
+Fluxo de Eventos de Exceção:
+4.1 - Dados Insuficientes: Caso nenhuma atividade tenha sido corrigida ou nenhuma
+dúvida tenha sido enviada à IA ainda.
+4.1.1 - Resultado: O sistema exibe a mensagem: "Dados insuficientes para gerar
+métricas. Aguarde a realização das atividades pelos alunos."
+5.1 - Erro de Processamento de Dados: Caso o sistema não consiga tabular as notas de
+diferentes FATECs simultaneamente.
+5.1.1 - Ação do sistema: O sistema solicita que o professor selecione apenas uma
+unidade por vez para gerar o gráfico.
+7.1 - Indisponibilidade do Módulo de IA: Caso o servidor que analisa as dúvidas (NLP)
+esteja fora do ar.
+7.1.1 - Resultado: O sistema exibe as notas das provas, mas oculta a seção de
+"Dúvidas Mais Frequentes", informando que a análise semântica está em manutenção.
+8.1 - Conexão de Internet:
+8.1.1 - Se a conexão cair durante o carregamento dos gráficos, o sistema exibe
+"Erro ao carregar métricas" e oferece um botão de "Recarregar"
 
