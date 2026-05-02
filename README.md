@@ -1,4 +1,4 @@
-PROJETO DE DESENVOLVIMENTO DE CORREÇÀO DE PROVAS E ATIVIDADES
+PROJETO DE DESENVOLVIMENTO DE CORREÇãO DE PROVAS E ATIVIDADES
 EM WEBSITES
 
 -INTEGRANTES
@@ -10,7 +10,7 @@ Kaike Pinheiro Simplício
 
 -PROPOSTA DO PROJETO
 
-Desenvolver um sistema web para correção de provas, com o objetivo de automatizar o processo de avaliação, estudo para avaliações e atividades,creduzir erros e otimizar o tempo dos professores e dos alunos também. 
+Desenvolver um sistema web para correção de provas, com o objetivo de automatizar o processo de avaliação, estudo para avaliações e atividades, reduzir erros e otimizar o tempo dos professores e dos alunos. 
 
 
 O SISTEMA PERMITIRÁ:
@@ -22,7 +22,6 @@ O SISTEMA PERMITIRÁ:
 - Consulta de provas anteriores dos alunos
 
 
-
 ATIVIDADES DO PROJETO
 - Levantamento de requisitos (Concluido)
 - Planejamento do sistema
@@ -31,6 +30,7 @@ ATIVIDADES DO PROJETO
 - Implementação da lógica de correção
 - Testes
 - Documentação final
+
 
 -FUNCIONALIDADES DO SISTEMA:
 - Cadastro de professores
@@ -45,9 +45,13 @@ ATIVIDADES DO PROJETO
 
 TECNOLOGIAS UTILIZADAS
 EX:
- HTML, CSS, JavaScript)
- Java / PHP)
- Banco de Dados - MySQL)
+ - HTML 
+ - CSS
+ - JavaScript
+ - Java 
+ - PHP
+ - Banco de Dados  
+ - MySQL
 
 
 STATUS DO PROJETO
